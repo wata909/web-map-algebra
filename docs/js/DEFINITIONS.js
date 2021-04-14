@@ -32,7 +32,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'geol',
 							'title'		: '地質',
 							'type'		: 'palette',
-							'template'	: 'https://kitao.net/tiles/seamless_original/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( geol == 13997056 ) 1\nif ( geol == 13322240 ) 0.5\n0"
 											]
@@ -41,7 +41,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'soil',
 							'title'		: '土壌分類',
 							'type'		: 'palette',
-							'template'	: 'https://kitao.net/tiles/soil/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/soil/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( soil < 119 ) 0\nif ( soil < 183 ) 1\n0"
 											]
@@ -50,7 +50,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'grad',
 							'title'		: '傾斜量',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/dem_gradation/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( grad < 5 ) 0.4\nif ( grad > 12 ) 0.7\nif ( grad < 20 ) 1\nif ( grad > 30 ) 0.5\n0"
 											]
@@ -59,7 +59,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'dire',
 							'title'		: '傾斜方位',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/dem_direction/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( dire < 60 ) 0.2\nif ( dire > 300 ) 0.2\nif ( dire < 120 ) 0.5\nif ( dire > 240 ) 0.5\n1"
 											]
@@ -68,7 +68,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tAve',
 							'title'		: '平均気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( tAve < 5 ) 0.2\nif ( tAve < 10 ) 0.6\nif ( tAve < 16 ) 1\nif ( tAve < 20 ) 0.4\n0"
 											]
@@ -77,7 +77,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMin',
 							'title'		: '最低気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( tMin < -5 ) 0\nif ( tMin < 0 ) 0.5\nif( tMin < 10 ) 1.0\nif( tMin < 15 ) 0.5\n0"
 											]
@@ -86,7 +86,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMax',
 							'title'		: '最高気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
 												"if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0"
 											]
