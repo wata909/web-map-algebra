@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>長野県データタイルレイヤ作成業務：DDマップストア</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<style type="text/css">
+		body	{
+			font-size: 14px;
+			margin: 0;
+		}
+		ul	{
+			margin: 0;
+			padding: 0;
+			clear: both;
+			margin-bottom:30px;
+		}
+		li	{
+			list-style: none;
+			float: left;
+			width: 120px;
+			padding: 5px;
+		}
+		img	{
+			cursor: grab;
+		}
+		
+		
+		div.group	{
+			font-weight: bold;
+		}
+		div.recipe	{
+			font-size:small;
+		}
+		
+		
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.clearfix:before {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.clearfix {
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<div style="background-color:#ccc;padding:5px;">
+	<span>長野県データタイルレイヤ：DDマップストア</span>
+	<a href="/labs/tools/tile/" target="_blank" style="float:right;">タイルテストツール</a>
+</div>
+<div style="padding:10px;">
+	<div class="group">シームレス地質図関連</div>
+	<div class="recipe">z=8-13：元タイル、z=14,15：z=13タイルから単純拡大して作成。</div>
+	<ul class="store clearfix">
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="シームレス地質図オリジナル版" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png" /><br />
+			オリジナル版
+		</li>
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="シームレス地質図簡略版" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_level2/{z}/{x}/{y}.png" /><br />
+			簡略版
+		</li>
+	</ul>
+	
+	<div class="group">土壌図関連</div>
+	<div class="recipe">シェープファイルをQGISで座標系変換。TileMill読み込み、色割り当て（土壌図全コードのパレット）、mbtiles出力。mbutilでpngに変換。</div>
+	<ul class="store clearfix">
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="土壌分類" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/soil/{z}/{x}/{y}.png" /><br />
+			土壌分類
+		</li>
+	</ul>
+	
+	<div class="group">地形関連</div>
+	<div class="recipe">元データ作成（z=8-14：地理院10B、z=15：10B単純拡大に5c、5b、5aを重ね合わせ）。3点（自ピクセル、右、下）から各値を計算。度単位100倍のピクセル値。</div>
+	<ul class="store clearfix">
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="傾斜量図" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png" /><br />
+			傾斜量図
+		</li>
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="傾斜方位図" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png" /><br />
+			傾斜方位図
+		</li>
+	</ul>
+	
+	<div class="group">気象関連</div>
+	<div class="recipe">元データ作成（3次メッシュごと1986年から2015年の合計30年分の平均、最低、最高の各気温）、100倍して3次メッシュごとにピクセル値で埋める。</div>
+	<ul class="store clearfix">
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="平均気温" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png" /><br />
+			平均気温
+		</li>
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="最低気温" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png" /><br />
+			最低気温
+		</li>
+		<li>
+			<img src="./img/ddmapicon.png" class="ddmapicon" data-title="最高気温" data-url="https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png" /><br />
+			最高気温
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+
+//ieではdataTypeに/があるとエラーになるためtext/plainは使えない
+//const dataType = 'text/plain';
+const dataType = 'text';
+
+// アイコンにdragstartイベントを追加，detaTransferにデータをセット
+(function(){
+	const icons_	= document.querySelectorAll( 'img.ddmapicon' );
+	const icons		= Array.prototype.slice.call( icons_, 0 );
+	icons.forEach(function( value_ ){
+		value_.addEventListener( 'dragstart', function( event_ ){
+			value_.style.cursor = 'grabbing';
+			event_.dataTransfer.clearData();
+			event_.dataTransfer.setData(
+				dataType,
+				JSON.stringify({
+					'title'			: $( this ).data( 'title' ),
+					'url'			: $( this ).data( 'url' ),
+					//data属性はすべて小文字になる
+					'legendData'	: $( this ).data( 'legenddata' ),
+					'legend'		: $( this ).data( 'legend' )
+				})
+			);
+			//画像はもともとdraggableなのでpreventDefaultしない（ドラッグできなくなる）
+			//event_.preventDefault();
+		});
+		value_.addEventListener( 'dragend', function( event_ ){
+			value_.style.cursor = 'grab';
+		});
+		value_.addEventListener( 'click', function( event_ ){
+			alert( value_.getAttribute('data-url') );
+		});
+	});
+})();
+
+
+(function(){
+	const icons_	= document.querySelectorAll( 'img.ddmaptest' );
+	const icons		= Array.prototype.slice.call( icons_, 0 );
+	icons.forEach(function( value_ ){
+		value_.addEventListener( 'dragstart', function( event_ ){
+			value_.style.cursor = 'grabbing';
+			event_.dataTransfer.clearData();
+			event_.dataTransfer.setData(
+				dataType,
+				JSON.stringify( testIconParameters[value_.getAttribute('data-code')] )
+			);
+			//画像はもともとdraggableなのでpreventDefaultしない（ドラッグできなくなる）
+			//event_.preventDefault();
+		});
+		value_.addEventListener( 'dragend', function( event_ ){
+			value_.style.cursor = 'grab';
+		});
+		value_.addEventListener( 'click', function( event_ ){
+			alert( value_.getAttribute('data-url') );
+		});
+	});
+})();
+
+(function(){
+	const icons_	= document.querySelectorAll( 'img.error' );
+	const icons		= Array.prototype.slice.call( icons_, 0 );
+	icons.forEach(function( value_ ){
+		value_.addEventListener( 'dragstart', function( event_ ){
+			value_.style.cursor = 'grabbing';
+			event_.dataTransfer.clearData();
+			event_.dataTransfer.setData(
+				dataType,
+				value_.getAttribute( 'data-text' )
+			);
+			//画像はもともとdraggableなのでpreventDefaultしない（ドラッグできなくなる）
+			//event_.preventDefault();
+		});
+		value_.addEventListener( 'dragend', function( event_ ){
+			value_.style.cursor = 'grab';
+		});
+		value_.addEventListener( 'click', function( event_ ){
+			alert( value_.getAttribute('data-text') );
+		});
+	});
+})();
+</script>
+</body>
+</html>
