@@ -6,7 +6,7 @@ DEFINITIONS.mapOption	= {
 							'center'	: [36.2277, 138.0721],
 							'zoom'		: 10,
 							'minZoom'	: 8,
-							'maxZoom'	: 15
+							'maxZoom'	: 14
 						};
 //背景地図
 DEFINITIONS.basemap	= [
