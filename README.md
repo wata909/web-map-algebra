@@ -52,6 +52,28 @@ if ( tMax > 5 ) 0.5
 すべての条件を入力すると，地質，最低気温，最高気温の背景が赤になります。  
 ![image](https://user-images.githubusercontent.com/3130494/140029717-c873a72c-8483-436c-a011-ef7049640eb5.png)
 
+次に，全体評価式を入力します。
+```
+geol * tMax * tMax
+```
+![image](https://user-images.githubusercontent.com/3130494/140029876-a96f04a9-cd8f-49c9-b646-8fd1b8d9c4d6.png)
+
+最後に判別式を入力します。
+```
+value
+```
+![image](https://user-images.githubusercontent.com/3130494/140030030-67f4ea7e-58cb-4225-bcb7-69d912b93d1f.png)
+
+すべての条件の入力を終えると，以下の通りとなります．  
+![image](https://user-images.githubusercontent.com/3130494/140030172-1108684f-2720-4e60-83a6-922a15cc57c7.png)
+
+最後に「反映」ボタンをクリックすると，評価結果が表示されます。この式の場合，生産適地としての好適度は，１～０の数値で示され，ピンク色が濃いほど好適度が高いことを意味します。  
+![image](https://user-images.githubusercontent.com/3130494/140030310-c0f4ded2-9af6-4f71-ba32-74e028a89d95.png)
+
+また，「画像として保存」をクリックし，範囲を指定した後に，右上の「取得する」をくりっくすると，評価結果を画像として保存することができます。  
+![image](https://user-images.githubusercontent.com/3130494/140030726-161b12be-8b38-4f33-a2b1-34603d21dfe6.png)
+
+
 
 ## デモサイト
 https://wata909.github.io/web-map-algebra/
