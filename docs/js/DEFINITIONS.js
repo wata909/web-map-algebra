@@ -6,7 +6,7 @@ DEFINITIONS.mapOption	= {
 							'center'	: [36.2277, 138.0721],
 							'zoom'		: 10,
 							'minZoom'	: 8,
-							'maxZoom'	: 14
+							'maxZoom'	: 13
 						};
 //背景地図
 DEFINITIONS.basemap	= [
@@ -91,7 +91,8 @@ DEFINITIONS.conditions	= [
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
-												"if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0"
+												// "if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0" original
+												"if ( tMax > 15 ) 0\nif ( tMax > 10 ) 1\nif ( tMax > 5 ) 0.5\n0"
 											]
 						}
 					];
