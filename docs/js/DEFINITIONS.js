@@ -26,7 +26,25 @@ DEFINITIONS.basemap	= [
 							'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg'
 						}
 					];
-//栽培適地評価条件
+//basemap_e
+DEFINITIONS.basemap_e	= [
+	{
+		'key'		: 'std',
+		'title'		: 'GSI Std',
+		'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png'
+	},
+	{
+		'key'		: 'pale',
+		'title'		: 'GSI Pale',
+		'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'
+	},
+	{
+		'key'		: 'photo',
+		'title'		: 'GSI Ortho',
+		'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg'
+	}
+];
+//栽培適地評価条件//栽培適地評価条件
 DEFINITIONS.conditions	= [
 						{
 							'key'		: 'geol',
