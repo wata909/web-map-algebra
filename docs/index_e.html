@@ -12,7 +12,7 @@
 	<script type="text/javascript" src="./js/L.Control.ShowZoom.js"></script>
 	<script type="text/javascript" src="./js/L.Control.Buttons.js"></script>
 	<script type="text/javascript" src="./js/L.Control.Legend.js"></script>
-	<script type="text/javascript" src="./js/DEFINITIONS.js"></script>
+	<script type="text/javascript" src="./js/DEFINITIONS_e.js"></script>
 	<script type="text/javascript" src="./js/window.js"></script>
 	<script type="text/javascript" src="./js/utilities.js"></script>
 	<script type="text/javascript" src="./js/ddmap.js"></script>
@@ -35,15 +35,15 @@
 	});
 	//]]>
 	</script>
-	<script type="text/javascript" src="./js/initialize.js"></script>
+	<script type="text/javascript" src="./js/initialize_e.js"></script>
 </head>
 <body>
 <div id="wrapper">
 	<div id="app"></div>
 	<div id="navi" style="padding:5px;z-index:400;">
 		<!-- 操作パネルタイトル右の閉じるボタンと開くボタン -->
-		<img src="./img/btn_close.png" class="toggleNavi close" alt="閉じる">
-		<img src="./img/btn_setup.png" class="toggleNavi setup" alt="設定">
+		<img src="./img/btn_close.png" class="toggleNavi close" alt="close">
+		<img src="./img/btn_setup.png" class="toggleNavi setup" alt="setting">
 		<h1>The Vineyard Suitability Assessment System</h1>
 		<div id="forms">
 			<!-- 基本設定 -->
@@ -52,30 +52,30 @@
 				<dl class="operation">
 					<dt>Base Map</dt>
 					<dd>
-						<select name="basemap_e" id="basemap"></select>
+						<select name="basemap" id="basemap"></select>
 					</dd>
 				</dl>
 				<!-- 評価条件 -->
-				<div>評価条件の選択</div>
+				<div>Select Assessment Condition</div>
 				<ul class="conditions"></ul>
 				<!-- 評価基準 -->
 				<div class="block total clearfix">
-					<input type="submit" value="反映" class="notready" style="float:right;">
-					<input type="button" value="評価基準式" name="compile" class="notready">
-					<input type="button" value="結果判定式" name="judge" class="notready">
+					<input type="submit" value="Apply" class="notready" style="float:right;">
+					<input type="button" value="Assess.  Formula" name="compile" class="notready">
+					<input type="button" value="Result Formula" name="judge" class="notready">
 				</div>
 				<!-- 評価レイヤ不透明度 -->
-				<div>評価レイヤの不透明度</div>
+				<div>transparency of Assessment Layer</div>
 				<div class="block opacity clearfix">
 					<div class="slider"></div>
 					<div class="value"><span></span> %</div>
 				</div>
 				<!-- 画像で保存 -->
 				<dl class="operation">
-					<dt>結果を画像で保存</dt>
+					<dt>Export Result</dt>
 					<dd class="save">
-						<input type="button" value="保存を開始" name="start" />
-						<input type="button" value="保存を終了" name="cancel" style="display:none;" />
+						<input type="button" value="Start export" name="start" />
+						<input type="button" value="Finish export" name="cancel" style="display:none;" />
 					</dd>
 				</dl>
 			</form>
@@ -97,8 +97,8 @@
 	<!-- 画像保存処理中に画面下に出す表記 -->
 	<div id="saving" style="display: none;">
 		<div>
-			<span>保存処理実行中（クリックで領域を選択）</span>
-			<span class="cancel">終了</span>
+			<span>Define export area (click to Select region)</span>
+			<span class="cancel">Cancel</span>
 		</div>
 	</div><!--/#style-->
 </div><!--/#wrapper-->
@@ -129,7 +129,7 @@
 		<textarea name="formula" cols="30" rows="5" style="width:300px;font-size:12px;"></textarea>
 	</div>
 	<div class="buttons samples">
-		<input type="button" class="sample" name="sample" value="サンプル入力" />
+		<input type="button" class="sample" name="sample" value="Sample formula" />
 	</div>
 </form>
 <div id="valueFormulaError"></div>

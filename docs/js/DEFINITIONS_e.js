@@ -12,17 +12,17 @@ DEFINITIONS.mapOption	= {
 DEFINITIONS.basemap	= [
 						{
 							'key'		: 'std',
-							'title'		: '標準地図',
+							'title'		: 'GSI Std',
 							'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/std/{z}/{x}/{y}.png'
 						},
 						{
 							'key'		: 'pale',
-							'title'		: '淡色地図',
+							'title'		: 'GSI Pale',
 							'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png'
 						},
 						{
 							'key'		: 'photo',
-							'title'		: '写真',
+							'title'		: 'GSI Ortho',
 							'template'	: 'https://cyberjapandata.gsi.go.jp/xyz/seamlessphoto/{z}/{x}/{y}.jpg'
 						}
 					];
@@ -30,7 +30,7 @@ DEFINITIONS.basemap	= [
 DEFINITIONS.conditions	= [
 						{
 							'key'		: 'geol',
-							'title'		: '地質',
+							'title'		: 'Geology',
 							'type'		: 'palette',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -40,7 +40,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'soil',
-							'title'		: '土壌分類',
+							'title'		: 'Soil',
 							'type'		: 'palette',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/soil/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -49,7 +49,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'grad',
-							'title'		: '傾斜量',
+							'title'		: 'Gradient',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -59,7 +59,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'dire',
-							'title'		: '傾斜方位',
+							'title'		: 'Direction',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -68,7 +68,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tAve',
-							'title'		: '平均気温',
+							'title'		: 'Annual mean temp.',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -77,7 +77,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMin',
-							'title'		: '平均最低気温',
+							'title'		: 'Mean min. temp.',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -87,7 +87,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMax',
-							'title'		: '平均最高気温',
+							'title'		: 'Mean max. temp.',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							'samples'	: [
