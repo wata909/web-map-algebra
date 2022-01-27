@@ -79,7 +79,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMin',
 							'title'		: '平均最低気温',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
 							'samples'	: [
 												// "if ( tMin < -5 ) 0\nif ( tMin < 0 ) 0.5\nif( tMin < 10 ) 1.0\nif( tMin < 15 ) 0.5\n0" original
 												"if ( tMin < 5 ) 0\n1"
@@ -89,7 +89,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMax',
 							'title'		: '平均最高気温',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
 							'samples'	: [
 												// "if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0" original
 												"if ( tMax > 15 ) 0\nif ( tMax > 10 ) 1\nif ( tMax > 5 ) 0.5\n0"
