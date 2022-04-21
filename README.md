@@ -6,7 +6,7 @@
 
 ## ジオ展 2022 出展
 
-本研究の成果を、[ジオ展 2022](https://www.geoten.org/2022/)にて、紹介します。[「13:30 スマート風土産業研究グループ」](https://www.geoten.org/2022/presen)になります。
+本研究の成果を[ジオ展 2022](https://www.geoten.org/2022/)にて、紹介します。[「13:30 スマート風土産業研究グループ」](https://www.geoten.org/2022/presen)になります。参考ページは、[ジオ展 2022 スマート風土産業研究グループ紹介](https://github.com/wata909/web-map-algebra/blob/main/geoten2022.md)になります。
 
 ## ワイン用ブドウ栽培適地評価システム
 
