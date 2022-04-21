@@ -18,14 +18,14 @@
 - 新規のワイン用ブドウ栽培農家およびワイナリーの増加
   - 栽培適地評価と、その情報の新規就農者等への提供が必要
     - 評価には、気温，日射，降水量，地質，土壌，土壌水分等の条件を考慮する必要がある  
-![image](https://user-images.githubusercontent.com/3130494/164384415-7460859e-d365-4605-91f4-4d46cc5fe230.png)
+![日本ワインの基礎知識と国内ワイン特区の分布](https://user-images.githubusercontent.com/3130494/164384415-7460859e-d365-4605-91f4-4d46cc5fe230.png)
 
 #### 「風土産業」とその再評価
 
 - 長野県出身の地理学者，三澤勝衞により提唱。地域の気候や地形等の条件に適した産業
   - 特に農業において推奨された
   - 前述の栽培適地評価に通じる  
-![image](https://user-images.githubusercontent.com/3130494/164384616-8554ad4c-0987-4df0-aa09-53f59a3c22e6.png)
+![三澤勝衞先生](https://user-images.githubusercontent.com/3130494/164384616-8554ad4c-0987-4df0-aa09-53f59a3c22e6.png)
 
 - 「スマート風土産業」
   - GIS 等を活用した適地適作の推進，すなわちデータドリブンな風土産業の確立
@@ -66,7 +66,7 @@
   - ワイン特区が 11。新規就農者も多い。環境も多様。
   - 千曲川ワインバレー（東地区）特区を対象に現地データも収集  
 
-![image](https://user-images.githubusercontent.com/3130494/164384806-1d32474e-60b5-499a-b563-73454d1c0232.png)
+![信州ワインバレー構想（上図）と，ワイン特区の分布（右）](https://user-images.githubusercontent.com/3130494/164384806-1d32474e-60b5-499a-b563-73454d1c0232.png)
 
 
 #### ワイン用ブドウ栽培適地評価システム概要
@@ -76,9 +76,9 @@
   2. WebGL を用いたデータタイルマップの演算機能
   3. ワイン用ブドウ栽培適地評価システムの WebGIS インターフェイス
 - Live Demo
-  - https://wata909.github.io/web-map-algebra/  
+  - https://wata909.github.io/web-map-algebra/v02  
 
-![image](https://user-images.githubusercontent.com/3130494/164388092-f1411f65-d67d-478f-9866-8b22ed3c8456.png)
+![ワイン用ブドウ栽培適地評価システム画面](https://user-images.githubusercontent.com/3130494/164389958-f1a07124-9bd8-480d-ab94-5a4f8c2d31a1.png)
 
 ##### 栽培適地評価のためのグリッド PNG タイル
 
