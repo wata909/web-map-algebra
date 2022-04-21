@@ -78,8 +78,7 @@
 - Live Demo
   - https://wata909.github.io/web-map-algebra/  
 
-![image](https://user-images.githubusercontent.com/3130494/164387932-eef21695-52a9-4b4b-99ce-72748396f09e.png)
-
+![image](https://user-images.githubusercontent.com/3130494/164388092-f1411f65-d67d-478f-9866-8b22ed3c8456.png)
 
 ##### 栽培適地評価のためのグリッド PNG タイル
 
