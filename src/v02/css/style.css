@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/* ******************************************************************************** */
+/* 見出し */
+h1	{
+	font-size	: 1em;
+	margin		: 0 0 5px;
+	padding		: 0;
+}
+
+/* ******************************************************************************** */
+/* form */
+form	{
+	font-size	: 12px;
+}
+
+/* ******************************************************************************** */
+/* form内のdl/ul全般 */
+form ul	{
+	list-style	: none;
+	margin		: 0;
+	padding		: 0;
+}
+#forms form	{
+	margin-bottom	: 5px;
+}
+#forms dl	{
+	margin	: 0 0 5px;
+}
+#forms ul	{
+	margin	: 0 0 5px;
+}
+
+/* ******************************************************************************** */
+input[type="button"],
+input[type="submit"],
+#selectType ul li	{
+	border				: solid 1px #999;
+	border-radius		: 4px;
+	background-color	: #eee;
+	cursor				: pointer;
+}
+input[type="button"]:hover,
+input[type="submit"]:hover,
+#selectType ul li:hover	{
+	background-color	: #bbb;
+}
+input[type="button"]:active,
+input[type="submit"]:active,
+#selectType ul li:active	{
+	background-color	: #ddd;
+}
+
+/* ******************************************************************************** */
+/* form内の横並びで見出しとform要素を並べる場合に使用 */
+form dl.operation	{
+	display			: table;
+	padding			: 0;
+}
+form dl.operation dt,
+form dl.operation dd {
+	display			: table-cell;
+	padding			: 0;
+}
+form dl.operation dt	{
+	padding-right	: 10px;
+}
+
+form ul.operation	{
+	display		: table;
+	text-align	: left;
+}
+form ul.operation li	{
+	display		: table-row;
+	line-height	: 2em;
+}
+form ul.operation li div	{
+	display		: table-cell;
+	text-align	: left;
+}
+form ul.operation li div	{
+	display		: table-cell;
+}
+form ul.operation li div:first-child	{
+	width		: 10em;
+}
+
+/* ******************************************************************************** */
+/* 評価条件に関する記述 */
+form ul.conditions	{
+	border				: 1px solid #ccc;
+	border-radius		: 7px;
+	padding				: 5px;
+}
+form ul.conditions li	{
+	margin				: 1px;
+	padding				: 2px 4px;
+	color				: #555;
+	background-color	: #eee;
+	border				: 1px solid #999;
+	border-radius		: 3px;
+}
+form ul.conditions li.apply	{
+	color				: #111;
+	background-color	: #fdd;
+}
+form ul.conditions li label	{
+	float: right;
+}
+form div.block	{
+	margin				: 0 0 5px;
+}
+
+/* ******************************************************************************** */
+/* 色未入力の場合のボタン文字色変更 */
+ul.conditions li input.formula.notready,
+div.total input.notready	{
+	color		: #f00;
+}
+
+/* ******************************************************************************** */
+/* 著作権表示 */
+div.copyright	{
+	margin-top	: 15px;
+	font-size	: 10px;
+	color		: #444;
+}
+
+/* ******************************************************************************** */
+/* DDマップレイヤform */
+form#ddmap	{
+	border			: 1px solid #ccc;
+	border-radius	: 7px;
+	padding			: 5px;
+}
+/* DDマップ削除ボタン */
+#ddmap div.opacity input.remove	{
+	float	: right;
+}
+
+/* ******************************************************************************** */
+/* 不透明度に関する記述 */
+/* スライダ */
+div.opacity div.slider	{
+	margin	: 5px 10px;
+	width	: 100px;
+	float	: left;
+}
+/* スライダの値 */
+div.opacity div.value	{
+	width		: 60px;
+	text-align	: right;
+	float		: left;
+	padding-top	: 2px;
+	color		: #333;
+	font-size	: 12px;
+}
+
+/* ******************************************************************************** */
+/* 評価式入力モーダルに関する設定（jQuery関連） */
+.ui-front	{
+	z-index		: 500;
+}
+.ui-widget	{
+	font-size	: 1em;
+}
+.no-close .ui-dialog-titlebar-close {
+	display		: none;
+}
+/* 評価式入力モーダルに関する設定 */
+#valueFormula input	{
+	font-size	: 0.8em;
+	text-align	: center;
+	padding		: 0;
+	width		: 50px;
+}
+#valueFormula input.builtin	{
+	width		: 37px;
+}
+#valueFormula input.sample	{
+	width		: 100px;
+}
+
+/* ******************************************************************************** */
+/* 画面保存作業中のウインドウした表示に関する記述 */
+#saving	{
+	position	: absolute;
+	bottom		: 0;
+	text-align	: center;
+	width		: 100%;
+	z-index		: 400;
+}
+#saving div	{
+	padding					: 10px;
+	width					: 500px;
+	margin					: auto;
+	color					: #522;
+	font-size				: 0.9em;
+	font-weight				: bold;
+	letter-spacing			: 2px;
+	background-color		: rgba( 255, 0, 0, 0.6 );
+	border-top-left-radius	: 10px;
+	border-top-right-radius	: 10px;
+}
+#saving input[type="button"]	{
+	font-weight				: bold;
+}
+
+/* ******************************************************************************** */
+/* 保存時メッセージ */
+.message	{
+	border				: 0;
+	background-color	: rgba(0,0,0,0);
+	color				: #fff;
+	font-size			: 12px;
+	text-shadow			:  1px 1px 0 #a0a, -1px -1px 0 #a0a,
+							-1px 1px 0 #a0a,  1px -1px 0 #a0a,
+							0px 1px 0 #a0a,  0   -1px 0 #a0a,
+							-1px 0   0 #a0a,  1px  0   0 #a0a;
+}
+
+/* ******************************************************************************** */
+/* ポップアップ */
+div.popup	{
+	width	: 250px;
+}
+div.popup h2	{
+	margin		: 0;
+	font-weight	: 1.2em;
+}
+div.popup table	{
+	margin			: 0;
+	padding			: 0;
+	width			: 100%;
+	box-sizing		: border-box;
+	border-collapse	: collapse;
+	border-right	: 1px solid #777;
+	border-bottom	: 1px solid #777;
+}
+div.popup table th	{
+	width				: 70px;
+	text-align			: left;
+	vertical-align		: top;
+	background-color	: #ccc;
+	border-left			: 1px solid #777;
+	border-top			: 1px solid #777;
+	font-weight			: normal;
+}
+div.popup table td	{
+	text-align			: left;
+	vertical-align		: top;
+	background-color	: #fff;
+	border-left			: 1px solid #777;
+	border-top			: 1px solid #777;
+}
+
+/* ******************************************************************************** */
+#selectType 	{
+	display				: none;
+	position			: absolute;
+	top					: 65px;
+	right				: 10px;
+	z-index				:401;
+	font-size			: 12px;
+	background-color	: rgba( 255, 255, 255, 0.7 );
+	border				: 1px solid #ccc;
+	border-radius		: 5px;
+	padding				: 5px;
+}
+#selectType ul	{
+	margin	: 0;
+	padding	: 0;
+}
+#selectType ul li	{
+	margin		: 3px 0 0;
+	padding		: 2px 4px;
+	text-align	: center;
+}
+
+/* ******************************************************************************** */
+form ul.operation	{
+	display		: table;
+	text-align	: left;
+}
+form ul.operation li	{
+	display		: table-row;
+	line-height	: 2em;
+}
+form ul.operation li div	{
+	display		: table-cell;
+	text-align	: left;
+}
+form ul.operation li div	{
+	display		: table-cell;
+}
+form ul.operation li div:first-child	{
+	width		: 10em;
+}
+
+/* ******************************************************************************** */
+#inputExtract	{
+	position			: absolute;
+	background-color	: rgba( 255, 255, 255, 0.9 );
+	border				: 1px solid #ccc;
+	border-radius		: 3px;
+	z-index				:401;
+	padding				: 5px;
+};
+#inputExtract form	{
+	margin	: 0;
+	padding	: 0;
+};
+#inputExtract form ul	{
+	display		: table;
+	list-style	: none;
+}
+#inputExtract form ul li	{
+	display		: table-row;
+	line-height	: 2em;
+}
+#inputExtract form ul li div	{
+	display	: table-cell;
+	padding	: 1px 4px;
+}
+#inputExtract form ul li div input[type="text"]	{
+	width		: 100px;
+	text-align	: right;
+}
