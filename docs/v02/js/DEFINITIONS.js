@@ -32,18 +32,19 @@ DEFINITIONS.conditions	= [
 							'key'		: 'geol',
 							'title'		: '地質',
 							'type'		: 'palette',
-							'template'	: 'https://kitao.net/tiles/seamless_original/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png',
 							//##追記
 							'legend'	: './json/geol.json',
 							'samples'	: [
-												"if ( geol == 13997056 ) 1\nif ( geol == 13322240 ) 0.5\n0"
+											//	"if ( geol == 13997056 ) 1\nif ( geol == 13322240 ) 0.5\n0" original
+											"if ( geol == 16777170 ) 1\nif ( geol == 16775900 ) 1\nif ( geol == 14483420 ) 1\nif ( geol == 14873058 ) 1 \nif ( geol == 16775065 ) 1 \nif ( geol == 15138815 ) 0.5 \n0"
 											]
 						},
 						{
 							'key'		: 'soil',
 							'title'		: '土壌分類',
 							'type'		: 'palette',
-							'template'	: 'https://kitao.net/tiles/soil/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/soil/{z}/{x}/{y}.png',
 							//##追記
 							'legend'	: './json/soil.json',
 							'samples'	: [
@@ -54,18 +55,19 @@ DEFINITIONS.conditions	= [
 							'key'		: 'grad',
 							'title'		: '傾斜量',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/dem_gradation/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
-												"if ( grad < 5 ) 0.4\nif ( grad > 12 ) 0.7\nif ( grad < 20 ) 1\nif ( grad > 30 ) 0.5\n0"
+												// "if ( grad < 5 ) 0.4\nif ( grad > 12 ) 0.7\nif ( grad < 20 ) 1\nif ( grad > 30 ) 0.5\n0" original
+												"if ( grad < 5 ) 1\nif ( grad < 10 ) 0.7\nif ( grad < 20 ) 0.5\nif ( grad < 30 ) 0.3\n0"
 											]
 						},
 						{
 							'key'		: 'dire',
 							'title'		: '傾斜方位',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/dem_direction/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -76,7 +78,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tAve',
 							'title'		: '平均気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -85,24 +87,26 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMin',
-							'title'		: '最低気温',
+							'title'		: '年最低気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_min/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
-												"if ( tMin < -5 ) 0\nif ( tMin < 0 ) 0.5\nif( tMin < 10 ) 1.0\nif( tMin < 15 ) 0.5\n0"
+												// "if ( tMin < -5 ) 0\nif ( tMin < 0 ) 0.5\nif( tMin < 10 ) 1.0\nif( tMin < 15 ) 0.5\n0" original
+												"if ( tMin < 5 ) 0\n1"
 											]
 						},
 						{
 							'key'		: 'tMax',
 							'title'		: '最高気温',
 							'type'		: 'num100',
-							'template'	: 'https://kitao.net/tiles/temperature_max/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
-												"if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0"
+												// "if ( tMax > 35 ) 0\nif ( tMax > 25 ) 0.5\nif( tMax > 20 ) 1.0\nif( tMax > 15 ) 0.5\n0" original
+												"if ( tMax > 15 ) 0\nif ( tMax > 10 ) 1\nif ( tMax > 5 ) 0.5\n0"
 											]
 						}
 					];

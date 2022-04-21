@@ -77,7 +77,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMin',
-							'title'		: '平均最低気温',
+							'title'		: '年最低気温',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -87,7 +87,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMax',
-							'title'		: '平均最高気温',
+							'title'		: '年最高気温',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
 							'samples'	: [
