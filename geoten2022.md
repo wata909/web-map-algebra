@@ -76,7 +76,10 @@
   2. WebGL を用いたデータタイルマップの演算機能
   3. ワイン用ブドウ栽培適地評価システムの WebGIS インターフェイス
 - Live Demo
-  - https://wata909.github.io/web-map-algebra/
+  - https://wata909.github.io/web-map-algebra/  
+
+![image](https://user-images.githubusercontent.com/3130494/164387932-eef21695-52a9-4b4b-99ce-72748396f09e.png)
+
 
 ##### 栽培適地評価のためのグリッド PNG タイル
 
