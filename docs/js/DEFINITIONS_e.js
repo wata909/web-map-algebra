@@ -77,7 +77,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMin',
-							'title'		: 'Mean min. temp.',
+							'title'		: 'Minimum temp.',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
 							'samples'	: [
@@ -87,7 +87,7 @@ DEFINITIONS.conditions	= [
 						},
 						{
 							'key'		: 'tMax',
-							'title'		: 'Mean max. temp.',
+							'title'		: 'Maximum temp.',
 							'type'		: 'num100',
 							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
 							'samples'	: [
