@@ -32,7 +32,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'geol',
 							'title'		: '地質',
 							'type'		: 'palette',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/seamless_original/{z}/{x}/{y}.png',
 							//##追記
 							'legend'	: './json/geol.json',
 							'samples'	: [
@@ -44,7 +44,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'soil',
 							'title'		: '土壌分類',
 							'type'		: 'palette',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/soil/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/soil/{z}/{x}/{y}.png',
 							//##追記
 							'legend'	: './json/soil.json',
 							'samples'	: [
@@ -55,7 +55,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'grad',
 							'title'		: '傾斜量',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/dem_gradation/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -67,7 +67,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'dire',
 							'title'		: '傾斜方位',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/dem_direction/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -78,7 +78,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tAve',
 							'title'		: '平均気温',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/temperature_ave/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -89,7 +89,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMin',
 							'title'		: '年最低気温',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/temperature_min/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
@@ -101,7 +101,7 @@ DEFINITIONS.conditions	= [
 							'key'		: 'tMax',
 							'title'		: '最高気温',
 							'type'		: 'num100',
-							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
+							'template'	: 'https://habs.rad.naro.go.jp/data_tiles/data_tiles/nagano/temperature_max/{z}/{x}/{y}.png',
 							//##追記
 							'unit'		: '度',
 							'samples'	: [
